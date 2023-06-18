@@ -1,0 +1,48 @@
+.catalog {
+  background-color: $bg-lightest-grey;
+  min-height: rem(48);
+
+  padding-top: rem(50);
+  padding-bottom: rem(56);
+
+  @include m {
+    padding-top: rem(80);
+    padding-bottom: rem(90);
+  }
+
+  @include l {
+    padding-top: rem(100);
+    padding-bottom: rem(120);
+  }
+}
+
+.catalog__wrapper {
+  @include l {
+    display: grid;
+    grid-template-columns: rem(318) rem(1011);
+    column-gap: rem(30);
+  }
+}
+
+.catalog__badge {
+  @include l {
+    grid-column: 1/-1;
+  }
+}
+
+.catalog__title {
+  margin-bottom: rem(20);
+
+  @include l {
+    grid-column: 1/-1;
+    margin-bottom: rem(40);
+  }
+}
+
+.catalog__cards {
+  margin-top: rem(41);
+
+  @include l {
+    margin-top: 0;
+  }
+}

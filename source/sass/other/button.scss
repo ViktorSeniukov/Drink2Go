@@ -1,0 +1,54 @@
+.button {
+  @include flex;
+  background-color: $base-white;
+  color: $base-primary;
+  border: none;
+  margin: 0;
+  padding: rem(8) rem(20);
+  border-radius: rem(4);
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: em(16, $fz);
+  line-height: rem(24);
+
+  @include hover {
+    background-color: $alt-primary-lighter;
+    color: $base-white;
+  }
+
+  @include focus {
+    background-color: $alt-primary-lighter;
+    color: $base-white;
+  }
+
+  @include active {
+    background-color: $alt-primary-darker;
+    color: $base-white;
+  }
+
+  @include disabled {
+    background-color: $alt-light-grey;
+    color: $base-white;
+  }
+
+  &--accent {
+    background-color: $base-primary;
+    color: $base-white;
+
+    @include disabled {
+      background-color: $base-gray;
+      color: $base-white;
+    }
+  }
+
+  &--accent-light {
+    background-color: $base-white;
+    color: $base-primary;
+  }
+
+  &--ico {
+    line-height: rem(20);
+    letter-spacing: -0.07em;
+  }
+}

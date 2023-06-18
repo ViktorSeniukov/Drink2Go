@@ -1,0 +1,59 @@
+@use 'sass:math';
+
+$fz-html: 16;
+
+@function strip-units($number) {
+  @return math.div($number, $number * 0 + 1);
+}
+
+@function em($values...) {
+  $context: strip-units(nth($values, length($values)));
+  $result: ();
+  $separator: list_separator($values);
+
+  @for $i from 1 through length($values) - 1 {
+    $value: nth($values, $i);
+
+    @if type-of($value) == 'number' {
+      $value: strip-units($value);
+      $result: append($result, math.div($value, $context) * 1em, $separator);
+    }
+
+    @else if type-of($value) == 'list' {
+      $result: append($result, em(append($value, $context)...), $separator);
+    }
+
+    @else {
+      $result: append($result, $value, $separator);
+    }
+  }
+
+  @return if(length($result) == 1, nth($result, 1), $result);
+}
+
+@function rem($pxValue) {
+  $result: math.div(strip-units($pxValue), strip-units($fz-html));
+  @return $result + rem;
+}
+
+@function flex($value) {
+  $result: null;
+
+  @if $value == 'start' {
+    $result: flex- + $value;
+  }
+
+  @else if $value == 'end' {
+    $result: flex- + $value;
+  }
+
+  @else if $value == 'between' {
+    $result: space- + $value;
+  }
+
+  @else {
+    $result: center;
+  }
+
+  @return $result;
+}

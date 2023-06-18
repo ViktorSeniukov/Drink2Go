@@ -1,0 +1,79 @@
+.card {
+  @include flex;
+
+  flex-direction: column;
+  padding: rem(40) rem(20) rem(20);
+  background-color: $base-white;
+
+  &:nth-child(n + 2) {
+    margin-top: rem(20);
+
+    @include m {
+      margin-top: 0;
+    }
+  }
+
+  @include m {
+    padding-top: rem(50);
+    padding-bottom: rem(30);
+  }
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: em(18, $fz);
+  line-height: rem(32);
+  color: $base-black;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: rem(4);
+
+  @include m {
+    margin-bottom: rem(10);
+    font-size: em(24, $fz);
+    line-height: rem(36);
+    margin-right: auto;
+  }
+}
+
+.card__description {
+  font-weight: 400;
+  font-size: em(14, $fz);
+  line-height: rem(20);
+  color: $base-black;
+  margin: 0;
+  margin-bottom: rem(16);
+
+  @include m {
+    margin-bottom: rem(20);
+  }
+}
+
+.card__picture {
+  order: -1;
+  margin-bottom: rem(24);
+
+  @include m {
+    margin-bottom: rem(30);
+  }
+}
+
+.card__footer {
+  @include flex(between);
+
+  width: 100%;
+}
+
+.card__price {
+  font-weight: 600;
+  font-size: em(20, $fz);
+  line-height: rem(32);
+  color: $base-black;
+}
+
+.card__button-ico {
+  color: $base-white;
+  margin-right: rem(6);
+  width: rem(20);
+  height: rem(16);
+}

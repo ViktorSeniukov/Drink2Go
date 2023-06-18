@@ -1,0 +1,110 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: $base-primary;
+  width: rem(20);
+  height: 100%;
+  top: 0;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+
+  --swiper-navigation-size: 20px;
+
+  @include m {
+    width: rem(80);
+    height: rem(640);
+
+    top: rem(10);
+
+    @include hover {
+      background: linear-gradient(90deg, var(--base-white) 0%, var(--transparent) 100%);
+    }
+
+    @include focus {
+      background: linear-gradient(90deg, var(--base-white) 0%, var(--transparent) 100%);
+    }
+
+    @include active {
+      background: linear-gradient(90deg, var(--alt-primary-opacity) 0%, var(--transparent) 100%);
+    }
+
+    @include disabled {
+      color: $base-gray;
+    }
+  }
+
+  @include l {
+    height: rem(714);
+  }
+}
+
+.swiper-button-prev {
+  left: auto;
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 0);
+
+  @include m {
+    @include hover {
+      background: linear-gradient(270deg, var(--base-white) 0%, var(--transparent) 100%);
+    }
+
+    @include focus {
+      background: linear-gradient(270deg, var(--base-white) 0%, var(--transparent) 100%);
+    }
+
+    @include active {
+      background: linear-gradient(270deg, var(--alt-primary-opacity) 0%, var(--transparent) 100%);
+    }
+  }
+}
+
+.swiper-pagination {
+  display: none;
+
+  @include l {
+    display: block;
+  }
+}
+
+.swiper-pagination-bullet {
+  @include l {
+    width: rem(62);
+    height: rem(24);
+    border-radius: 0;
+    background-color: transparent;
+    position: relative;
+
+    &::after {
+      @include center;
+
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: rem(4);
+      background-color: $base-white;
+    }
+
+    @include hover {
+      &::after {
+        background-color: $alt-primary-opacity;
+      }
+    }
+
+    @include focus {
+      &::after {
+        background-color: $alt-primary-opacity;
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet-active {
+  @include l {
+    &::after {
+      background-color: $base-primary;
+    }
+  }
+}

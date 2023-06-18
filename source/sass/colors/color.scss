@@ -1,0 +1,19 @@
+:root {
+  --base-white: hsla(0, 0%, 100%, 1);
+  --base-gray: hsla(0, 0%, 74%, 1);
+  --base-black: hsla(0, 0%, 20%, 1);
+  --base-primary: hsla(256, 55%, 58%, 1);
+  --base-secondary: hsla(255, 100%, 96%, 1);
+
+  --alt-primary-opacity: hsla(256, 55%, 58%, 0.25);
+  --alt-primary-lighter: hsla(256, 76%, 68%, 1);
+  --alt-primary-darker: hsla(256, 48%, 46%, 1);
+  --alt-light-grey: hsla(0, 0%, 89%, 1);
+
+  --bg-lightest-grey: hsla(0, 0%, 97%, 1);
+  --bg-flat-white: hsla(31, 44%, 92%, 1);
+  --bg-lavender-latte: hsla(251, 79%, 95%, 1);
+  --bg-espresso: hsla(212, 6%, 90%, 1);
+
+  --transparent: hsla(0, 0%, 100%, 0)
+}

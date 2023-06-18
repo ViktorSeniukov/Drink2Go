@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  width: 280px;
+
+  @include m {
+    width: 728px;
+  }
+
+  @include l {
+    width: 1360px;
+  }
+}

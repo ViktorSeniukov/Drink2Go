@@ -1,0 +1,78 @@
+.noUi-target {
+  border: none;
+  box-shadow: none;
+  background-color: $alt-light-grey;
+}
+
+.noUi-horizontal {
+  height: rem(4);
+}
+
+.noUi-connect {
+  background-color: $alt-primary-lighter;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: rem(24);
+  height: rem(24);
+  top: rem(-10);
+  right: 0;
+}
+
+.noUi-handle {
+  box-shadow: none;
+
+  border: 2px solid $alt-primary-lighter;
+  background: $base-white;
+
+  border-radius: 50%;
+}
+
+.noUi-handle:before, .noUi-handle:after {
+  display: none;
+}
+
+.noUi-handle {
+  @include hover {
+    &:before,
+    &:after {
+      @include center;
+
+      display: block;
+      width: rem(16);
+      height: rem(16);
+      border-radius: 50%;
+      background-color: $alt-primary-opacity;
+    }
+  }
+
+  @include focus {
+    &:before,
+    &:after {
+      @include center;
+
+      display: block;
+      width: rem(16);
+      height: rem(16);
+      border-radius: 50%;
+      background-color: $alt-primary-opacity;
+    }
+  }
+
+  @include active {
+    &:before,
+    &:after {
+      @include center;
+
+      display: block;
+      width: rem(16);
+      height: rem(16);
+      border-radius: 50%;
+      background-color: $base-primary;
+    }
+  }
+}
+
+.noUi-handle.noUi-handle-lower {
+  right: -24px;
+}

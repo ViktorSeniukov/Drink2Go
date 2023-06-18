@@ -1,0 +1,38 @@
+.social {
+  @include flex;
+}
+
+.social__item {
+  &:nth-child(n + 2) {
+    margin-left: rem(20);
+  }
+}
+
+.social__link {
+  padding: em(10, $fz);
+  border-radius: rem(4);
+  color: $base-gray;
+  display: block;
+
+  @include hover {
+    background-color: $base-secondary;
+    color: $base-primary;
+  }
+
+  @include focus {
+    background-color: $base-secondary;
+    color: $base-primary;
+  }
+
+  @include active {
+    background-color: $alt-primary-opacity;
+    color: $base-primary;
+  }
+}
+
+.social__ico {
+  width: em(20, $fz);
+  height: em(20, $fz);
+  color: inherit;
+  display: block;
+}

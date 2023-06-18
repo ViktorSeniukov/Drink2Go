@@ -1,0 +1,16 @@
+.nojs__header {
+  margin-bottom: rem(228);
+}
+
+.nojs__burger-button {
+  display: none;
+}
+
+.nojs__menu {
+  display: block;
+  position: absolute;
+  top: rem($header_height);
+  left: 50%;
+  transform: translate(-50%);
+  flex-direction: column;
+}

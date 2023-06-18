@@ -1,0 +1,47 @@
+.filter-form {
+  @include m {
+    display: grid;
+    grid-template-columns: rem(223) rem(222) rem(223);
+    gap: rem(40) rem(30);
+  }
+
+  @include l {
+    @include flex(start, flex-start);
+
+    flex-direction: column;
+  }
+}
+
+.filter-form__button-wrapper {
+  @include m {
+    @include flex;
+
+    grid-column: 1/-1;
+    column-gap: rem(20);
+  }
+}
+
+.filter-form__button {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  margin-top: rem(30);
+
+  &:first-child {
+    margin-bottom: rem(20);
+
+    @include m {
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-child {
+    margin-top: 0;
+  }
+
+  @include m {
+    margin-top: 0;
+    width: auto;
+  }
+}
