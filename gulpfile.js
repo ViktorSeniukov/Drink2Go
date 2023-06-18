@@ -114,6 +114,8 @@ function watchFiles () {
   gulp.watch('source/sass/**/*.scss', gulp.series(processStyles));
   gulp.watch('source/js/script.js', gulp.series(processScripts));
   gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
+  gulp.watch('build/css/style.css', gulp.series(browser.stream));
+  gulp.watch('build/*.html', gulp.series(browser.stream));
 }
 
 function compileProject (done) {

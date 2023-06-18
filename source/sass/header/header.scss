@@ -1,0 +1,14 @@
+.header {
+  @include flex(between);
+}
+
+//.header__logo-container {
+//  width: em(32, $fz);
+//  height: em(36, $fz);
+//}
+
+.header__logo {
+  width: em(32, $fz);
+  height: em(36, $fz);
+  color: var(--base-primary);
+}

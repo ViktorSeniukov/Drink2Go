@@ -1,0 +1,10 @@
+.menu-links {}
+
+.menu-links__list {
+  @include flex;
+}
+
+.menu-links__link {
+  text-decoration: none;
+  color: var(--clr);
+}

@@ -1,0 +1,21 @@
+.social {
+  @include flex;
+}
+
+.social__item {
+  &:nth-child(n + 2) {
+    margin-left: rem(20);
+  }
+}
+
+.social__link {
+  padding: em(10, $fz);
+  display: block;
+}
+
+.social__ico {
+  width: em(20, $fz);
+  height: em(20, $fz);
+  color: var(--base-gray);
+  display: block;
+}

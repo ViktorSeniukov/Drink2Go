@@ -1,0 +1,11 @@
+.navigation {}
+
+.navigation__list {
+  @include flex;
+}
+
+.navigation__ico {
+  width: em(16, $fz);
+  height: em(16, $fz);
+  color: var(--base-black);
+}

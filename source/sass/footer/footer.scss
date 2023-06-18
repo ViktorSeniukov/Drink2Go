@@ -1,0 +1,4 @@
+.footer__header {
+  @include flex(between);
+  padding: rem(20);
+}

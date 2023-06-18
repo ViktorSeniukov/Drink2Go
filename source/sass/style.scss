@@ -1,0 +1,20 @@
+@import "fonts/fonts";
+
+@import "other/normalize";
+
+@import "helpers/functions";
+@import "helpers/variables";
+@import "helpers/mixin";
+
+@import "colors/color";
+
+@import "other/body";
+@import "other/visually-hidden";
+
+@import "header/header";
+@import "header/navigation";
+@import "header/menu-links";
+
+@import "footer/footer";
+@import "footer/social";
+@import "footer/links";
