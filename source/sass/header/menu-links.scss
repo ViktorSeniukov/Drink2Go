@@ -2,9 +2,48 @@
 
 .menu-links__list {
   @include flex;
+  width: 100%;
+
+  &--close {
+    display: none;
+  }
+
+  &--open {
+    display: block;
+    position: absolute;
+    top: rem($header_height);
+    left: 50%;
+    transform: translate(-50%);
+    flex-direction: column;
+    background-color: var(--base-white);
+  }
+}
+
+.menu-links__item {
+  width: inherit;
+
+  &:first-child .menu-links__link {
+    padding-top: rem(19);
+    border-top: solid 1px var(--base-secondary);
+  }
 }
 
 .menu-links__link {
+  @include flex;
+
+  //display: block;
   text-decoration: none;
-  color: var(--clr);
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+  font-weight: 500;
+  font-size: em(12, $fz);
+  line-height: rem(16);
+  color: var(--base-black);
+  text-transform: uppercase;
+
+  border-bottom: solid 1px var(--base-secondary);
+
+  &:active {
+    background-color: var(--base-secondary);
+  }
 }

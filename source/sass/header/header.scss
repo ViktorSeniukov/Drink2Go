@@ -1,5 +1,9 @@
 .header {
   @include flex(between);
+
+  width: 320px;
+  box-sizing: border-box;
+  padding-left: rem(20);
 }
 
 //.header__logo-container {

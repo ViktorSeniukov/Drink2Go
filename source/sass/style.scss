@@ -1,7 +1,5 @@
 @import "fonts/fonts";
 
-@import "other/normalize";
-
 @import "helpers/functions";
 @import "helpers/variables";
 @import "helpers/mixin";
@@ -10,11 +8,24 @@
 
 @import "other/body";
 @import "other/visually-hidden";
+@import "other/normalize";
+@import "other/container";
 
 @import "header/header";
 @import "header/navigation";
 @import "header/menu-links";
 
+@import "other/section";
+
+@import "slider/slider";
+
+@import "main/features/features";
+@import "main/features/features-item";
+
+@import "main/catalog/catalog";
+
 @import "footer/footer";
 @import "footer/social";
 @import "footer/links";
+
+@import "nojs/nojs";
