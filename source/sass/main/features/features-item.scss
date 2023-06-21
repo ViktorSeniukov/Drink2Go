@@ -1,0 +1,22 @@
+.features-item__title {
+  font-weight: 700;
+  font-size: em(18, $fz);
+  line-height: rem(32);
+
+  text-align: center;
+  color: $base-black;
+
+  margin: 0;
+  margin-bottom: rem(4);
+}
+
+.features-item__description {
+  font-weight: 400;
+  font-size: em(14, $fz);
+  line-height: rem(20);
+
+  text-align: center;
+  color: $base-black;
+
+  margin: 0;
+}

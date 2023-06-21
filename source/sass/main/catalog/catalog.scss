@@ -1,0 +1,15 @@
+.catalog {
+  background-color: $bg-lightest-grey;
+  min-height: rem(48);
+
+  padding-top: rem(50);
+  padding-bottom: rem(44);
+}
+
+.catalog__title {
+  margin-bottom: rem(20);
+}
+
+.catalog__cards {
+  margin-top: rem(36);
+}

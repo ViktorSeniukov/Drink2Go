@@ -1,0 +1,18 @@
+.header {
+  @include flex(between);
+
+  width: 320px;
+  box-sizing: border-box;
+  padding-left: rem(20);
+}
+
+//.header__logo-container {
+//  width: em(32, $fz);
+//  height: em(36, $fz);
+//}
+
+.header__logo {
+  width: em(32, $fz);
+  height: em(36, $fz);
+  color: $base-primary;
+}

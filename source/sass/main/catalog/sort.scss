@@ -1,0 +1,26 @@
+.sort {
+  @include flex(between);
+
+  width: 100%;
+  margin-bottom: rem(16);
+}
+
+.sort__label {
+  font-weight: 600;
+  font-size: em(16, $fz);
+  line-height: rem(24);
+}
+
+.sort__select {
+  font-weight: 600;
+  font-size: em(16, $fz);
+  line-height: rem(24);
+
+  border: none;
+  background-color: transparent;
+
+  color: $base-primary;
+  //text-align: right;
+  padding: rem(4) rem(14) rem(4) rem(6);
+  width: rem(165);
+}

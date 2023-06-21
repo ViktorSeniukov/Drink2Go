@@ -1,0 +1,19 @@
+.button {
+  @include flex;
+  background-color: $base-white;
+  color: $base-primary;
+  border: none;
+  margin: 0;
+  padding: rem(8) rem(20);
+  border-radius: rem(4);
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: em(16, $fz);
+  line-height: rem(24);
+
+  &--accent {
+    background-color: $base-primary;
+    color: $base-white;
+  }
+}

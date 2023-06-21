@@ -1,0 +1,74 @@
+.control {
+  @include flex;
+}
+
+.control__label {
+  font-size: em(16, $fz);
+  line-height: rem(24);
+  margin-left: rem(10);
+  color: $base-black;
+}
+
+.control--radio {
+  &:nth-child(n + 3) {
+    margin-top: rem(20);
+  }
+
+  .control__mark {
+    position: relative;
+    margin: 0;
+    background-color: $base-white;
+    width: rem(20);
+    height: rem(20);
+    border: 2px solid $base-primary;
+    border-radius: 50%;
+  }
+
+  .control__input[type="radio"] {
+    &:checked + .control__mark::after {
+      @include center;
+      content: "";
+      width: rem(16);
+      height: rem(16);
+      border-radius: 50%;
+      background-color: $base-primary;
+    }
+  }
+}
+
+.control--switch {
+  &:nth-child(n + 3) {
+    margin-top: rem(20);
+  }
+
+  .control__mark {
+    position: relative;
+    margin: 0;
+    background-color: $base-gray;
+    width: rem(42);
+    height: rem(24);
+    border-radius: rem(12);
+    transition: all .2s ease-out;
+
+    &::after {
+      @include center($x: 0, $left: 2px);
+      content: "";
+      width: rem(20);
+      height: rem(20);
+      background-color: $base-white;
+      border-radius: 50%;
+      transition: all .2s ease-out;
+    }
+  }
+
+  .control__input[type="checkbox"] {
+    &:checked + .control__mark {
+      background-color: $base-primary;
+
+      &::after {
+        left: unset;
+        right: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.features {
+  padding-top: rem(50);
+  padding-bottom: rem(60);
+}
+
+.features__item {
+  &:nth-child(n + 2) {
+    margin-top: rem(32);
+  }
+}
