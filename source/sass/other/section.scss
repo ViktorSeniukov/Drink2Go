@@ -7,7 +7,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
-  color: var(--base-primary);
+  color: $base-primary;
 
   margin: 0;
   margin-bottom: rem(4);
@@ -19,7 +19,7 @@
   line-height: rem(36);
 
   text-align: center;
-  color: var(--base-black);
+  color: $base-black;
 
   margin: 0;
   margin-bottom: rem(36);

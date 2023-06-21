@@ -1,0 +1,41 @@
+.academy {
+  @include flex;
+
+  padding-top: rem(20);
+  padding-bottom: rem(30);
+}
+
+.academy__text {
+  font-size: em(12, $fz);
+  line-height: rem(16);
+  color: $base-gray;
+  margin-right: rem(3);
+}
+
+.academy__link {
+  @include flex;
+
+  font-size: em(12, $fz);
+  line-height: rem(16);
+  color: $base-gray;
+
+  @include hover {
+    color: $base-primary;
+  }
+
+  @include focus {
+    color: $base-primary;
+  }
+
+  @include active {
+    color: $alt-primary-darker;
+  }
+}
+
+.acasemy__logo {
+  width: rem(12);
+  height: rem(16);
+  color: inherit;
+
+  padding-left: rem(4);
+}

@@ -14,5 +14,5 @@
 .header__logo {
   width: em(32, $fz);
   height: em(36, $fz);
-  color: var(--base-primary);
+  color: $base-primary;
 }

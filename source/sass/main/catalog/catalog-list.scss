@@ -1,0 +1,5 @@
+.catalog-list {
+  @include flex;
+
+  flex-direction: column;
+}

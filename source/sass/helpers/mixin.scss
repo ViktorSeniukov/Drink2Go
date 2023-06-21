@@ -3,3 +3,34 @@
   justify-content: flex($justify);
   align-items: $align-items;
 }
+
+@mixin center($x: -50%, $y: -50%, $top: 50%, $left: 50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate($x, $y);
+}
+
+@mixin hover() {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin focus() {
+  &:focus {
+    @content;
+  }
+}
+
+@mixin active() {
+  &:active {
+    @content;
+  }
+}
+
+@mixin disabled() {
+  &:disabled {
+    @content;
+  }
+}

@@ -15,7 +15,7 @@
     left: 50%;
     transform: translate(-50%);
     flex-direction: column;
-    background-color: var(--base-white);
+    background-color: $base-white;
   }
 }
 
@@ -24,7 +24,7 @@
 
   &:first-child .menu-links__link {
     padding-top: rem(19);
-    border-top: solid 1px var(--base-secondary);
+    border-top: solid 1px $base-secondary;
   }
 }
 
@@ -38,12 +38,12 @@
   font-weight: 500;
   font-size: em(12, $fz);
   line-height: rem(16);
-  color: var(--base-black);
+  color: $base-black;
   text-transform: uppercase;
 
-  border-bottom: solid 1px var(--base-secondary);
+  border-bottom: solid 1px $base-secondary;
 
   &:active {
-    background-color: var(--base-secondary);
+    background-color: $base-secondary;
   }
 }

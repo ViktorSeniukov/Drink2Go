@@ -10,12 +10,12 @@
 @import "other/visually-hidden";
 @import "other/normalize";
 @import "other/container";
+@import "other/section";
+@import "other/button";
 
 @import "header/header";
 @import "header/navigation";
 @import "header/menu-links";
-
-@import "other/section";
 
 @import "slider/slider";
 
@@ -23,9 +23,18 @@
 @import "main/features/features-item";
 
 @import "main/catalog/catalog";
+@import "main/catalog/filter-form";
+@import "main/catalog/filter";
+@import "main/catalog/control";
+@import "main/catalog/filter-milk";
+@import "main/catalog/filter-country";
+@import "main/catalog/sort";
+@import "main/catalog/catalog-list";
+@import "main/catalog/card";
 
 @import "footer/footer";
 @import "footer/social";
 @import "footer/links";
+@import "footer/academy";
 
 @import "nojs/nojs";
