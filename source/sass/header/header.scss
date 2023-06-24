@@ -4,15 +4,51 @@
   width: 320px;
   box-sizing: border-box;
   padding-left: rem(20);
+  margin: 0 auto;
+
+  @include m {
+    padding: 0 rem(20);
+    width: $m;
+  }
+
+  @include l {
+    padding: 0 rem(40);
+    width: rem(1440);
+  }
 }
 
-//.header__logo-container {
-//  width: em(32, $fz);
-//  height: em(36, $fz);
-//}
+.header__logo-container {
+  @include l {
+    @include flex;
+
+    margin-right: rem(162);
+  }
+}
 
 .header__logo {
   width: em(32, $fz);
   height: em(36, $fz);
   color: $base-primary;
+
+  @include m {
+    width: rem(82);
+  }
+
+  @include l {
+    width: rem(170);
+  }
+}
+
+.header__text {
+  display: none;
+
+  @include l {
+    display: inline;
+    font-size: em(12, $fz);
+    line-height: rem(16);
+    color: $base-black;
+
+    margin: 0;
+    margin-left: rem(20);
+  }
 }

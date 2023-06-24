@@ -7,6 +7,15 @@
 
   &:nth-child(n + 2) {
     margin-top: rem(20);
+
+    @include m {
+      margin-top: 0;
+    }
+  }
+
+  @include m {
+    padding-top: rem(50);
+    padding-bottom: rem(30);
   }
 }
 
@@ -16,7 +25,15 @@
   line-height: rem(32);
   color: $base-black;
   margin: 0;
+  margin-right: auto;
   margin-bottom: rem(4);
+
+  @include m {
+    margin-bottom: rem(10);
+    font-size: em(24, $fz);
+    line-height: rem(36);
+    margin-right: auto;
+  }
 }
 
 .card__description {
@@ -26,14 +43,19 @@
   color: $base-black;
   margin: 0;
   margin-bottom: rem(16);
+
+  @include m {
+    margin-bottom: rem(20);
+  }
 }
 
 .card__picture {
   order: -1;
-}
-
-.card__img {
   margin-bottom: rem(24);
+
+  @include m {
+    margin-bottom: rem(30);
+  }
 }
 
 .card__footer {

@@ -23,4 +23,10 @@
 
   margin: 0;
   margin-bottom: rem(36);
+
+  @include m {
+    font-size: em(42 ,$fz);
+    line-height: rem(64);
+    margin-bottom: rem(80);
+  }
 }

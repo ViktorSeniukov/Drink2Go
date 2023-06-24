@@ -1,0 +1,10 @@
+.map__picture {
+  @include flex;
+
+  width: 100%;
+}
+
+.map__img {
+  width: 100%;
+  object-fit: cover;
+}

@@ -20,18 +20,54 @@
     background-color: $base-white;
     width: rem(20);
     height: rem(20);
-    border: 2px solid $base-primary;
+    border: 2px solid $base-gray;
     border-radius: 50%;
   }
 
   .control__input[type="radio"] {
-    &:checked + .control__mark::after {
+    &:checked + .control__mark {
+      border-color: $base-primary;
+
+      &::after {
+        @include center;
+        content: "";
+        width: rem(16);
+        height: rem(16);
+        border-radius: 50%;
+        background-color: $base-primary;
+      }
+    }
+  }
+
+  @include m {
+    @include hover {
+      & .control__mark {
+        border-color: $alt-primary-lighter;
+      }
+
+      & .control__mark::after {
+        @include center;
+        content: "";
+        width: rem(16);
+        height: rem(16);
+        border-radius: 50%;
+        background-color: $alt-primary-opacity;
+      }
+    }
+  }
+
+  &:focus-within {
+    & > .control__mark {
+      border-color: $alt-primary-lighter;
+    }
+
+    & > .control__mark::after {
       @include center;
       content: "";
       width: rem(16);
       height: rem(16);
       border-radius: 50%;
-      background-color: $base-primary;
+      background-color: $alt-primary-opacity;
     }
   }
 }
@@ -45,13 +81,14 @@
     position: relative;
     margin: 0;
     background-color: $base-gray;
-    width: rem(42);
-    height: rem(24);
+    width: rem(38);
+    height: rem(20);
+    border: 2px solid $base-gray;
     border-radius: rem(12);
     transition: all .2s ease-out;
 
     &::after {
-      @include center($x: 0, $left: 2px);
+      @include center($x: 0, $left: 0);
       content: "";
       width: rem(20);
       height: rem(20);
@@ -64,11 +101,28 @@
   .control__input[type="checkbox"] {
     &:checked + .control__mark {
       background-color: $base-primary;
+      border-color: $base-primary;
 
       &::after {
         left: unset;
-        right: 2px;
+        right: 0;
       }
+    }
+  }
+
+  @include m {
+    @include hover {
+      & .control__mark {
+        background-color: $alt-primary-opacity;
+        border-color: $alt-primary-lighter;
+      }
+    }
+  }
+
+  &:focus-within {
+    & > .control__mark {
+      background-color: $alt-primary-opacity;
+      border-color: $alt-primary-lighter;
     }
   }
 }

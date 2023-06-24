@@ -17,7 +17,8 @@
 @import "header/navigation";
 @import "header/menu-links";
 
-@import "slider/slider";
+@import "main/swiper/swiper";
+@import "main/swiper/slide";
 
 @import "main/features/features";
 @import "main/features/features-item";
@@ -26,11 +27,17 @@
 @import "main/catalog/filter-form";
 @import "main/catalog/filter";
 @import "main/catalog/control";
+@import "main/catalog/slider";
+@import "main/catalog/filter-price";
 @import "main/catalog/filter-milk";
 @import "main/catalog/filter-country";
 @import "main/catalog/sort";
+@import "main/catalog/select";
 @import "main/catalog/catalog-list";
 @import "main/catalog/card";
+@import "main/catalog/pagination";
+
+@import "main/map/map";
 
 @import "footer/footer";
 @import "footer/social";

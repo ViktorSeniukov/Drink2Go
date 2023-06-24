@@ -1,0 +1,169 @@
+.slide {
+  background-color: var(--slider-bg);
+
+  &--first {
+    --slider-bg: var(--bg-flat-white);
+  }
+
+  &--second {
+    --slider-bg: var(--bg-lavender-latte);
+  }
+
+  &--third {
+    --slider-bg: var(--bg-espresso);
+  }
+
+  @include m {
+    background: linear-gradient(0deg,var(--base-white) 22.6%,var(--slider-bg) 10%,var(--slider-bg) 100%);
+  }
+
+  @include l {
+    background: none;
+    background-color: var(--slider-bg);
+  }
+}
+
+.slide__wrapper {
+  @include flex;
+
+  min-height: rem(656);
+
+  flex-direction: column;
+  width: rem(320);
+  padding: rem(20) rem(20) rem(60);
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @include m {
+    width: rem(768);
+    padding: rem(60) rem(80) 0;
+    margin: 0 auto;
+  }
+
+  @include l {
+    flex-direction: row;
+    gap: rem(30);
+    width: rem(1440);
+    padding: rem(30) rem(80) rem(84);
+  }
+}
+
+.slide__picture {
+  width: rem(280);
+  height: rem(280);
+
+  margin-bottom: rem(10);
+
+  @include m {
+    order: 1;
+
+    width: rem(476);
+    height: rem(476);
+
+    margin-top: rem(20);
+    margin-bottom: 0;
+  }
+
+  @include l {
+    order: 0;
+
+    width: rem(600);
+    height: rem(600);
+
+    margin: 0;
+  }
+}
+
+.slide__badge {
+  display: block;
+  width: fit-content;
+  font-weight: 700;
+  font-size: em(12, $fz);
+  line-height: rem(16);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $base-primary;
+
+  margin: 0 auto;
+  margin-bottom: rem(4);
+
+  @include l {
+    margin-left: 0;
+  }
+}
+
+.slide__title {
+  font-weight: 700;
+  font-size: em(36, $fz);
+  line-height: rem(48);
+  letter-spacing: 0.72px;
+  text-align: center;
+  color: $base-black;
+
+  margin: 0;
+  margin-bottom: rem(10);
+
+  @include m {
+    font-size: em(56, $fz);
+    line-height: rem(80);
+    letter-spacing: 1.12px;
+
+    margin-bottom: rem(16);
+  }
+
+  @include l {
+    text-align: left;
+  }
+}
+
+.slide__description {
+  font-size: em(14, $fz);
+  line-height: rem(20);
+  text-align: center;
+  color: $base-black;
+
+  margin: 0;
+  margin-bottom: auto;
+
+  @include m {
+    font-size: em(20, $fz);
+    line-height: rem(32);
+  }
+
+  @include l {
+    text-align: left;
+  }
+}
+
+.slide__footer {
+  @include flex;
+
+  margin-top: rem(20);
+
+  @include l {
+    justify-content: flex-start;
+    margin-top: rem(40);
+  }
+}
+
+.slide__price-wrapper {
+  @include flex;
+
+  margin-right: rem(20);
+}
+
+.slide__price {
+  font-weight: 600;
+  font-size: em(20, $fz);
+  line-height: rem(32);
+
+  &--sale {
+    font-weight: 400;
+    font-size: em(16, $fz);
+    line-height: rem(32);
+    text-decoration: line-through;
+    color: $base-primary;
+
+    margin-right: rem(6);
+  }
+}

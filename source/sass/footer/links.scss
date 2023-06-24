@@ -1,6 +1,10 @@
 .links {
   padding-top: rem(20);
   padding-bottom: rem(20);
+
+  @include m {
+    padding: 0;
+  }
 }
 
 .links__title {

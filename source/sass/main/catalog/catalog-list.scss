@@ -2,4 +2,14 @@
   @include flex;
 
   flex-direction: column;
+
+  @include m {
+    display: grid;
+    grid-template-columns: repeat(2, rem(349));
+    gap: rem(30);
+  }
+
+  @include l {
+    grid-template-columns: repeat(3, rem(317));
+  }
 }

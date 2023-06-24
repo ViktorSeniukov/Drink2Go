@@ -1,10 +1,37 @@
 .features {
   padding-top: rem(50);
   padding-bottom: rem(60);
+
+  @include m {
+    padding-top: rem(60);
+    padding-bottom: rem(100);
+  }
+
+  @include l {
+    padding-top: rem(100);
+    padding-bottom: rem(120);
+  }
+}
+
+.features__list {
+  @include m {
+    display: grid;
+    grid-template-columns: repeat(2, rem(339));
+    gap: rem(50) rem(20);
+  }
+
+  @include l {
+    grid-template-columns: rem(318) rem(317) rem(318) rem(317);
+    gap: rem(30);
+  }
 }
 
 .features__item {
   &:nth-child(n + 2) {
     margin-top: rem(32);
+
+    @include m {
+      margin-top: 0;
+    }
   }
 }

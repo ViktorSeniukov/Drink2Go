@@ -5,8 +5,15 @@
 }
 
 .navigation__menu-links {
-  @media (max-width: 320px) {
-    order: 1;
+  order: 1;
+
+  @include m {
+    margin-right: rem(60);
+    order: 0;
+  }
+
+  @include l {
+    margin-right: rem(162);
   }
 }
 
@@ -14,6 +21,30 @@
   display: block;
   padding: rem(22);
   height: em(16, $fz);
+  color: $base-black;
+
+  @include m {
+    padding: rem(32) rem(22);
+
+    @include hover {
+      color: $base-primary;
+    }
+
+    @include focus {
+      color: $base-primary;
+    }
+
+    @include active {
+      color: $base-primary;
+      background-color: $base-secondary;
+    }
+  }
+
+  @include l {
+    @include flex;
+
+    padding: rem(32) rem(20);
+  }
 }
 
 .navigation__ico {
@@ -21,7 +52,24 @@
 
   width: rem(16);
   height: rem(16);
-  color: $base-black;
+  color: inherit;
+
+  @include l {
+    margin-right: rem(8);
+  }
+}
+
+.navigation__link-text {
+  display: none;
+
+  @include l {
+    display: inline;
+    font-weight: 500;
+    font-size: em(12, $fz);
+    line-height: rem(16);
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+  }
 }
 
 .navigation__button {
@@ -32,7 +80,7 @@
   box-sizing: border-box;
   background-color: $base-white;
   border: none;
-  //transition: all .1s ease-out;
+  color: $base-black;
 
   &:active {
     background-color: $base-secondary;
@@ -56,5 +104,9 @@
       background-color: $base-black;
       mask-image: url("../../img/icons/stack.svg#burger-open");
     }
+  }
+
+  @include m {
+    display: none;
   }
 }

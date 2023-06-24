@@ -1,3 +1,40 @@
+.features-item {
+  padding-top: rem(66);
+
+  background-size: rem(52) rem(56);
+  background-position: top center;
+  background-repeat: no-repeat;
+  
+  &--eco {
+    background-image: url("../../../img/icons/stack.svg#features-eco");
+  }
+
+  &--speed {
+    background-image: url("../../../img/icons/stack.svg#features-speed");
+  }
+
+  &--comfort {
+    background-image: url("../../../img/icons/stack.svg#features-comfort");
+  }
+
+  &--vigor {
+    background-image: url("../../../img/icons/stack.svg#features-vigor");
+  }
+
+
+  @include m {
+    padding-top: 0;
+    padding-left: rem(72);
+    background-position: top 4px left;
+  }
+
+  @include l {
+    padding-left: 0;
+    padding-top: rem(76);
+    background-position: top center;
+  }
+}
+
 .features-item__title {
   font-weight: 700;
   font-size: em(18, $fz);
@@ -8,6 +45,17 @@
 
   margin: 0;
   margin-bottom: rem(4);
+
+  @include m {
+    font-size: em(24, $fz);
+    line-height: rem(36);
+    text-align: left;
+    margin-bottom: rem(10);
+  }
+  
+  @include l {
+    text-align: center;
+  }
 }
 
 .features-item__description {
@@ -19,4 +67,14 @@
   color: $base-black;
 
   margin: 0;
+
+  @include m {
+    font-size: em(16, $fz);
+    line-height: rem(24);
+    text-align: left;
+  }
+
+  @include l {
+    text-align: center;
+  }
 }

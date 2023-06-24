@@ -4,6 +4,10 @@
   padding: 0;
   margin: 0;
   border: none;
+
+  @include m {
+    justify-content: flex-start;
+  }
 }
 
 .filter__title {
@@ -13,50 +17,4 @@
   font-size: em(16, $fz);
   line-height: rem(24);
   color: $base-black;
-}
-
-.filter__range {
-  width: 100%;
-  margin-bottom: rem(24);
-}
-
-.filter__range-input-wrapper {
-  @include flex(between);
-  width: 100%;
-  margin-bottom: rem(30);
-}
-
-.filter__range-input {
-  box-sizing: border-box;
-  width: rem(114);
-  border-color: $alt-primary-lighter;
-  padding: rem(6) rem(10);
-  border-radius: rem(4);
-  border-style: solid;
-  text-align: center;
-  font-weight: 500;
-  font-size: em(16, $fz);
-  line-height: rem(24);
-
-  &::placeholder {
-    color: $base-gray;
-  }
-
-  @include focus {
-    border-color: $alt-primary-darker;
-  }
-
-  @include active {
-    border-color: $alt-primary-darker;
-  }
-
-  @include hover {
-    border-color: $alt-primary-darker;
-  }
-
-  @include disabled {
-    border-color: $alt-light-grey;
-    background-color: $bg-lightest-grey;
-    color: $base-gray;
-  }
 }

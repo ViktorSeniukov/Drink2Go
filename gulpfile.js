@@ -36,7 +36,7 @@ export function validateMarkup () {
 }
 
 export function processStyles () {
-  return gulp.src('source/sass/*.scss', { sourcemaps: isDevelopment })
+  return gulp.src('source/sass/*.{scss,css}', { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -86,7 +86,7 @@ export function copyAssets () {
   return gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
-    'source/*.webmanifest',
+    'source/*.webmanifest'
   ], {
     base: 'source'
   })
